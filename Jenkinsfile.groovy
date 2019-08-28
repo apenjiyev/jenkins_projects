@@ -4,7 +4,7 @@ node {
         echo "echo Parameter added"
     }
     stage("install git"){
-        sh "ssh ec2-user@${Environment} sudo yum install git -y"
+        sh "ssh ec2-user@${Environment} sudo yum install git python-pip -y"
 
     }
     stage("Pull Repo"){
