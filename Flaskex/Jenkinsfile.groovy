@@ -8,7 +8,7 @@ node {
 
     }
     stage("remove repo"){
-        //sh "ssh ec2-user@${ENVIR} sudo rm -rf /home/ec2-user/flask-examples"
+        sh "ssh ec2-user@${ENVIR} sudo rm -rf /home/ec2-user/Flaskex"
     }
     stage("Pull Repo"){
         sh "ssh ec2-user@${ENVIR} git clone https://github.com/apenjiyev/Flaskex.git"
