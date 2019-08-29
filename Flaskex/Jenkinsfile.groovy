@@ -19,7 +19,7 @@ node {
         sh "echo hello"
     }
     stage("pip install"){
-        sh "ssh ec2-user@${ENVIR} sudo pip install -r /home/ec2-user/flask-examplesFlaskex/requirements.txt"
+        sh "ssh ec2-user@${ENVIR} sudo pip install -r /home/ec2-user/Flaskex/requirements.txt"
     }
     stage("Run App"){
        sh "ssh ec2-user@${ENVIR} python /home/ec2-user/Flaskex/app.py"
